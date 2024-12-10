@@ -77,15 +77,6 @@ h1 {
     border-color: #dc3545;
 }
 
-.success {
-    color: green;
-    font-weight: bold;
-}
-
-.failure {
-    color: red;
-    font-weight: bold;
-}
 
 #results {
     margin-top: 20px;
