@@ -58,16 +58,51 @@ document.getElementById('submit').addEventListener('click', () => {
     for (let i = 0; i < totalQuestions; i++) {
         const radioSuccess = document.querySelector(`input[name="q${i}"][value="success"]`);
         const radioFailure = document.querySelector(`input[name="q${i}"][value="failure"]`);
-        const questionResultDiv = document.createElement('div');
-        questionResultDiv.className = radioSuccess.checked ? 'success' : 'failure';
-        questionResultDiv.textContent = radioSuccess.checked ? 'Réussite' : 'Échec';
-        resultsDiv.appendChild(questionResultDiv);
         if (radioSuccess.checked) {
             successCount++;
         }
     }
 
     const successPercentage = (successCount / totalQuestions) * 100;
+    const failureCount = totalQuestions - successCount;
+    const failurePercentage = 100 - successPercentage;
+
+    const canvas = document.createElement('canvas');
+    canvas.id = 'successChart';
+    canvas.width = 400;
+    canvas.height = 400;
+    resultsDiv.appendChild(canvas);
+
+    new Chart(canvas, {
+        type: 'doughnut',
+        data: {
+            labels: ['Réussite', 'Échec'],
+            datasets: [{
+                data: [successCount, failureCount],
+                backgroundColor: [
+                    'rgba(54, 162, 235, 0.7)',
+                    'rgba(255, 99, 132, 0.7)'
+                ],
+                borderColor: [
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 99, 132, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+                tooltip: {
+                    enabled: true
+                }
+            }
+        }
+    });
+
     const percentageDiv = document.createElement('div');
     percentageDiv.innerHTML = `Pourcentage de réussite: ${successPercentage.toFixed(2)}%`;
     resultsDiv.appendChild(percentageDiv);
