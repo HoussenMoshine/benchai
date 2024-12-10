@@ -3,15 +3,6 @@ body {
     margin: 20px;
     background-color: #f4f4f4;
     color: #333;
-.success-question {
-    background-color: #d1e8ff; 
-    color: #333; 
-}
-
-.failure-question {
-    background-color: #ffdddd; 
-    color: #333; 
-}
 
 h1 {
     color: #333;
