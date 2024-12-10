@@ -65,10 +65,16 @@ h1 {
     transition: background-color 0.3s, color 0.3s;
 }
 
-.option input[type="radio"]:checked + span {
+.option input[type="radio"][value="success"]:checked + span {
     background-color: #007bff;
     color: #fff;
     border-color: #007bff;
+}
+
+.option input[type="radio"][value="failure"]:checked + span {
+    background-color: #dc3545;
+    color: #fff;
+    border-color: #dc3545;
 }
 
 .success {
@@ -114,12 +120,12 @@ h1 {
         padding: 8px 12px;
     }
 }
-.success-question {
+.success {
     background-color: #d1e8ff; 
     color: #333; 
 }
 
-.failure-question {
+.failure {
     background-color: #ffdddd; 
     color: #333; 
 }

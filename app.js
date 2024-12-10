@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 div.addEventListener('change', function(event) {
                     if (event.target.type === 'radio') {
                         if (event.target.value === 'success') {
-                            div.classList.remove('failure-question');
-                            div.classList.add('success-question');
+                            div.classList.remove('failure');
+                            div.classList.add('success');
                         } else if (event.target.value === 'failure') {
-                            div.classList.remove('success-question');
-                            div.classList.add('failure-question');
+                            div.classList.remove('success');
+                            div.classList.add('failure');
                         }
                     }
                 });
