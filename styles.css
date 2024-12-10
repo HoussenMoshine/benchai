@@ -114,3 +114,12 @@ h1 {
         padding: 8px 12px;
     }
 }
+.success-question {
+    background-color: #d1e8ff; 
+    color: #333; 
+}
+
+.failure-question {
+    background-color: #ffdddd; 
+    color: #333; 
+}
