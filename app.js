@@ -26,6 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span>Échec</span>
                     </label>
                 `;
+                div.addEventListener('change', function(event) {
+                    if (event.target.type === 'radio') {
+                        if (event.target.value === 'success') {
+                            div.classList.remove('failure-question');
+                            div.classList.add('success-question');
+                        } else if (event.target.value === 'failure') {
+                            div.classList.remove('success-question');
+                            div.classList.add('failure-question');
+                        }
+                    }
+                });
                 questionsDiv.appendChild(div);
             });
             loading.style.display = 'none';
