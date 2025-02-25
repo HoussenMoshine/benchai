@@ -1,6 +1,6 @@
 # BenchAI - Plateforme de Benchmarking d'IA
 
-![Capture d'écran](screenshot.png)
+![Capture d'écran](benchai.jpg)
 
 ## Description
 BenchAI est une plateforme complète pour évaluer et comparer les performances de différents modèles d'intelligence artificielle. Le projet permet de :
