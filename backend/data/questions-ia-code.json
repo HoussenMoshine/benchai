@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "question": "Créez une landing page sur la chaine youtube de \"Houssen Moshinaly\" qui parle d'IA. Vous pouvez utiliser le HTML, le CSS et le JS. Le design doit être superbe et moderne. Combinez tout le code dans une seule page.",
+        "type": "web",
+        "categorie": "code"
+    },
+    {
+        "id": 2,
+        "question": "Créez un jeu graphique de Pierre-Papier-Ciseaux contre l'ordinateur en Python. L'utilisateur choisit entre Pierre, Papier et Ciseaux, et l'ordinateur choisit aléatoirement. Le programme détermine le gagnant selon les règles classiques et affiche le résultat.",
+        "type": "jeu",
+        "categorie": "code"
+    },
+    {
+        "id": 3,
+        "question": "Trouvez les racines de l'équation quadratique : x2 - 5x + 6 = 0",
+        "type": "mathématiques",
+        "categorie": "code"
+    },
+    {
+        "id": 4,
+        "question": "Écrivez une fonction JavaScript qui implémente le tri fusion (merge sort) et expliquez sa complexité temporelle et spatiale.",
+        "type": "algorithme",
+        "categorie": "code"
+    },
+    {
+        "id": 5,
+        "question": "Créez une API REST simple avec Express.js pour gérer une liste de tâches (TODO list) avec les opérations CRUD de base.",
+        "type": "backend",
+        "categorie": "code"
+    },
+    {
+        "id": 6,
+        "question": "Optimisez la requête SQL suivante : SELECT * FROM users JOIN orders ON users.id = orders.user_id WHERE orders.status = 'completed' AND users.country = 'France';",
+        "type": "sql",
+        "categorie": "code"
+    },
+    {
+        "id": 7,
+        "question": "Développez un composant React qui affiche un compteur avec des boutons pour incrémenter et décrémenter, en utilisant les hooks useState et useEffect.",
+        "type": "frontend",
+        "categorie": "code"
+    }
+]

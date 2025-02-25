@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique des Benchmarks IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="history.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="with-nav">
+            <div class="main-nav">
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link">← Retour aux benchmarks</a>
+                    <a href="ranking.html" class="nav-link">Classement →</a>
+                </div>
+                <h1 class="history-title">Historique des Benchmarks IA</h1>
+            </div>
+        </header>
+
+        <main class="history-page">
+            <section class="filters">
+                <div class="filter-group">
+                    <input type="text" id="search-ai" placeholder="Rechercher une IA..." class="filter-input">
+                    <select id="type-filter" class="filter-select">
+                        <option value="all">Tous les types</option>
+                        <option value="code">Benchmark Code</option>
+                        <option value="raisonnement">Benchmark Raisonnement</option>
+                    </select>
+                    <select id="sort-by" class="filter-select">
+                        <option value="date-desc">Date (récent → ancien)</option>
+                        <option value="date-asc">Date (ancien → récent)</option>
+                        <option value="score-desc">Score (élevé → bas)</option>
+                        <option value="score-asc">Score (bas → élevé)</option>
+                    </select>
+                </div>
+                <div class="export-group">
+                    <button id="export-csv" class="action-btn">Exporter CSV</button>
+                    <button id="export-pdf" class="action-btn">Exporter PDF</button>
+                    <button id="delete-selected" class="action-btn danger-btn">Supprimer la sélection</button>
+                </div>
+            </section>
+
+            <section class="results-table">
+                <table id="benchmarks-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="select-all"></th>
+                            <th>Date</th>
+                            <th>Nom de l'IA</th>
+                            <th>Type</th>
+                            <th>Score</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="benchmarks-body">
+                        <!-- Contenu dynamique -->
+                    </tbody>
+                </table>
+            </section>
+
+            <div class="pagination">
+                <button id="prev-page" class="page-btn" disabled>&lt; Précédent</button>
+                <div id="page-numbers" class="page-numbers">
+                    <!-- Numéros de page dynamiques -->
+                </div>
+                <button id="next-page" class="page-btn">Suivant &gt;</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de confirmation de suppression -->
+    <div id="delete-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Confirmer la suppression</h2>
+            <p>Êtes-vous sûr de vouloir supprimer ce benchmark ?</p>
+            <p>Cette action est irréversible.</p>
+            <div class="modal-actions">
+                <button id="confirm-delete" class="danger-btn">Supprimer</button>
+                <button id="cancel-delete" class="secondary-btn">Annuler</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

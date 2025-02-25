@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classement des Benchmarks IA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="ranking.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header class="with-nav">
+            <div class="main-nav">
+                <a href="index.html" class="nav-link">← Retour à l'accueil</a>
+                <h1 class="ranking-title">Classement des Benchmarks IA</h1>
+            </div>
+            <div class="filter-container">
+                <label for="benchmark-type-filter">Type de benchmark :</label>
+                <select id="benchmark-type-filter" class="form-control">
+                    <option value="all">Tous types</option>
+                    <option value="code">Benchmark Code</option>
+                    <option value="raisonnement">Benchmark Raisonnement</option>
+                </select>
+            </div>
+        </header>
+
+        <main class="ranking-page">
+            <section class="ranking-table">
+                <table id="ranking-table">
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th></th> <!-- Nouvelle colonne pour les badges -->
+                            <th>Nom de l'IA</th>
+                            <th>Type de benchmark</th>
+                            <th>Score</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-body">
+                        <!-- Contenu dynamique -->
+                    </tbody>
+                </table>
+            </section>
+            
+            <section class="stats-section">
+                <h2>Statistiques Globales</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="total-benchmarks">0</div>
+                        <div class="stat-label">Benchmarks effectués</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="average-score">0%</div>
+                        <div class="stat-label">Score moyen</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value" id="top-score">0%</div>
+                        <div class="stat-label">Meilleur score</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chart-section">
+                <div class="chart-container">
+                    <canvas id="ranking-chart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

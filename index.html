@@ -6,16 +6,73 @@
     <title>Benchmarks IA</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="app.js" defer></script>
 </head>
 <body>
-    <h1>Benchmarks pour tester des IA</h1>
-    <div id="loading">Chargement des questions en cours...</div>
-    <div id="instructions">
-        Pour chaque question, sélectionnez "Réussite" si l'IA a répondu correctement, sinon sélectionnez "Échec."
+    <div class="container">
+        <header>
+            <h1>Benchmarks pour tester des IA</h1>
+            <nav class="main-nav">
+                <a href="history.html" class="nav-link">Voir l'historique complet →</a>
+            </nav>
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <span>Chargement des questions...</span>
+            </div>
+        </header>
+
+        <section class="setup-section">
+            <div class="ai-info">
+                <label for="ai-name">Nom de l'IA testée :</label>
+                <input type="text" id="ai-name" required placeholder="Entrez le nom de l'IA">
+            </div>
+            
+            <div class="benchmark-tabs">
+                <button class="tab-btn active" data-type="code">Benchmark Code</button>
+                <button class="tab-btn" data-type="raisonnement">Benchmark Raisonnement</button>
+            </div>
+        </section>
+
+        <section class="instructions">
+            <p>Pour chaque question, sélectionnez "Réussite" si l'IA a répondu correctement, sinon sélectionnez "Échec."</p>
+        </section>
+
+        <main>
+            <div id="questions" class="questions-grid"></div>
+            
+            <div class="actions">
+                <button id="submit" class="submit-btn" disabled>
+                    Calculer le score
+                </button>
+            </div>
+        </main>
+
+        <section id="results" class="results hidden">
+            <div class="chart-container">
+                <canvas id="successChart"></canvas>
+            </div>
+            <div class="score-details">
+                <div class="score-card">
+                    <span class="label">Score total</span>
+                    <span class="value" id="totalScore">0%</span>
+                </div>
+                <div class="stats">
+                    <div class="stat success">
+                        <span class="label">Réussites</span>
+                        <span class="value" id="successCount">0</span>
+                    </div>
+                    <div class="stat failure">
+                        <span class="label">Échecs</span>
+                        <span class="value" id="failureCount">0</span>
+                    </div>
+                </div>
+            </div>
+            <div class="actions">
+                <button id="resetBtn" class="reset-btn">
+                    Réinitialiser le test
+                </button>
+            </div>
+        </section>
     </div>
-    <div id="questions"></div>
-    <button id="submit">Soumettre</button>
-    <div id="results"></div>
-    <script src="app.js"></script>
 </body>
 </html>
