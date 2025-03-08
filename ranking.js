@@ -1,5 +1,6 @@
 class RankingManager {
     constructor() {
+        this.totalPossibleScore = 100; // Score maximum possible
         this.tableBody = document.getElementById('ranking-body');
         this.chartCanvas = document.getElementById('ranking-chart');
         this.chart = null;
@@ -43,7 +44,7 @@ class RankingManager {
             if (index === 0) badge = '<span class="badge gold">Or</span>';
             if (index === 1) badge = '<span class="badge silver">Argent</span>';
             if (index === 2) badge = '<span class="badge bronze">Bronze</span>';
-            const scorePercentage = (result.score / totalPossibleScore) * 100;
+            const scorePercentage = (result.score / this.totalPossibleScore) * 100;
             
             if (scorePercentage >= 90) {
                 badge = '<span class="badge grand-maitre">Grand Maître</span>';

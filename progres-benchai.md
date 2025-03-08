@@ -30,6 +30,11 @@
 ## 3. Améliorations Récentes
 
 ### Corrections Techniques
+- Correction d'une erreur ReferenceError dans ranking.js :
+  * Problème : La variable totalPossibleScore était utilisée sans référence correcte (this)
+  * Symptôme : Les benchmarks ne s'affichaient pas, erreur console "totalPossibleScore is not defined"
+  * Solution : Ajout de this.totalPossibleScore dans le constructeur et utilisation de this.totalPossibleScore dans renderTable()
+  * Impact : Résolution complète du problème d'affichage des benchmarks
 - Normalisation des fichiers JSON
 - Suppression des balises HTML non échappées
 - Validation systématique des entrées

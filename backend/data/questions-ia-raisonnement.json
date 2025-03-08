@@ -1,49 +1,49 @@
 [
     {
         "id": 1,
-        "question": "Je parle sans bouche et j'entends sans oreilles. Je n'ai pas de corps, mais je suis animé par le vent. Que suis-je ?",
-        "type": "devinette",
+        "question": "Je parle sans bouche, j'entends sans oreilles, je n'existe que lorsque le vent souffle, mais je disparais dans le silence. Qui suis-je ? **Indice supplémentaire :** Ma structure repose sur des équations différentielles non linéaires. \u003cbutton class=\"citation-flag\" data-index=\"1\"\u003e",
+        "type": "devinette", 
         "categorie": "raisonnement"
     },
     {
         "id": 2,
-        "question": "Expliquez les causes multiples de l'arrivée des Nazis en Allemagne, en prenant en compte les facteurs économiques, politiques, militaires et sociaux.",
+        "question": "Analysez les causes de l'arrivée des Nazis en Allemagne en intégrant : 1) L'hyperinflation de 1923 et sa modélisation économique (équation de Fisher), 2) L'influence des traités de Versailles et de Locarno via la théorie des jeux, 3) Le rôle des *Freikorps* dans la fragmentation militaire. \u003cbutton class=\"citation-flag\" data-index=\"2\"\u003e",
         "type": "dissertation",
         "categorie": "raisonnement"
     },
     {
         "id": 3,
-        "question": "Trois personnes, A, B et C, occupent des professions différentes : médecin, avocat, ingénieur. Sachant que A n'est pas avocat, et que C n'est pas médecin, et que l'avocat est plus âgé que B, quelle est la profession de chacun ?",
+        "question": "A, B, C ont des métiers distincts : médecin, avocat, ingénieur. Contraintes : 1) A ≠ avocat, C ≠ médecin, 2) L'avocat \u003e B en âge, 3) Si B est ingénieur, alors C est médecin (mais C ≠ médecin). Déduisez les métiers en formalisant un arbre de décision avec probabilités bayésiennes. \u003cbutton class=\"citation-flag\" data-index=\"4\"\u003e",
         "type": "logique",
         "categorie": "raisonnement"
     },
     {
         "id": 4,
-        "question": "Imaginons que vous soyez un médecin qui a deux patients en attente d'une transplantation d'organe. L'un est un jeune adulte avec une grande potentialité future, l'autre est un homme âgé qui a une famille qui dépend de lui. Si vous n'avez qu'un seul organe disponible, à qui devriez-vous donner l'organe et pourquoi ?",
+        "question": "Un organe est disponible pour deux patients : un jeune avec un QI de 160 et un vieil humanitaire Prix Nobel. Appliquez le cadre éthique de Rawls (« voile d'ignorance ») et la théorie de la justice distributive de Parfit. Quel choix maximise l'utilité sociale ? \u003cbutton class=\"citation-flag\" data-index=\"7\"\u003e",
         "type": "éthique",
         "categorie": "raisonnement"
     },
     {
         "id": 5,
-        "question": "Tous les philosophes sont des penseurs. Certains penseurs sont des écrivains. Aucun écrivain n'est romancier s'il n'est pas penseur. Question : Déterminez la validité de la conclusion : 'Certains philosophes sont romanciers.' Fournissez une déduction logique étape par étape.",
+        "question": "Tous les philosophes sont des penseurs. Certains penseurs sont des écrivains. Aucun écrivain n'est romancier s'il n'est pas penseur. **Démonstration formelle requise :** Utilisez la logique des prédicats du premier ordre pour valider : ∃x (Philosophe(x) ∧ Romancier(x)). \u003cbutton class=\"citation-flag\" data-index=\"5\"\u003e",
         "type": "logique",
         "categorie": "raisonnement"
     },
     {
         "id": 6,
-        "question": "Dans un monde où la téléportation instantanée devient possible, comment cela affecterait-il l'économie mondiale, les relations internationales et l'environnement ? Analysez les impacts positifs et négatifs.",
+        "question": "Modélisez l'impact de la téléportation quantique sur : 1) La théorie de la valeur-travail de Marx, 2) Les équilibres de Nash dans les échanges internationaux, 3) Le paradoxe de Fermi en cosmologie. \u003cbutton class=\"citation-flag\" data-index=\"6\"\u003e",
         "type": "analyse",
         "categorie": "raisonnement"
     },
     {
         "id": 7,
-        "question": "Si vous pouviez créer une IA pour résoudre un seul problème mondial, lequel choisiriez-vous et pourquoi ? Considérez les implications éthiques, pratiques et sociales de votre choix.",
+        "question": "Concevez une IA pour résoudre le changement climatique. Décrivez : 1) Son architecture (type GAN/transformer), 2) Les données critiques (satellite, socio-économiques), 3) Les risques de biais (ex : inégalités Nord/Sud). \u003cbutton class=\"citation-flag\" data-index=\"9\"\u003e",
         "type": "éthique",
         "categorie": "raisonnement"
     },
     {
         "id": 8,
-        "question": "Expérience de pensée : Considérant la relativité générale sur la nature de l'espace-temps, si on a une porte des étoiles sur Terre et qu'elle donne sur une planète située à 5 milliards d'années-lumières et qu'on passe cette porte des étoiles et que depuis l'autre planète, on regarde vers la direction de la terre, qu'est-ce qu'on devrait voir ?",
+        "question": "Expérience de pensée : Considérant la relativité générale sur la nature de l'espace-temps, si on a une porte des étoiles sur Terre et qu'elle donne sur une planète située à 5 milliards d'années-lumières et qu'on passe cette porte des étoiles et que depuis l'autre planète, on regarde vers la direction de la terre, qu'est-ce qu'on devrait voir ? \u003cbutton class=\"citation-flag\" data-index=\"8\"\u003e",
         "type": "science",
         "categorie": "raisonnement"
     }
