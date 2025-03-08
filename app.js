@@ -186,9 +186,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const failureCount = totalQuestions - successCount;
-        const successPercentage = totalQuestions > 0 
+        const successPercentage = totalQuestions > 0
             ? ((successCount / totalQuestions) * 100).toFixed(2)
             : 0;
+        const totalPossibleScore = totalQuestions * 100;
 
         // Mise à jour de l'interface
         successCountEl.textContent = successCount;

@@ -1,44 +1,62 @@
 [
     {
         "id": 1,
-        "question": "Créez une landing page sur la chaine youtube de \"Houssen Moshinaly\" qui parle d'IA. Vous pouvez utiliser le HTML, le CSS et le JS. Le design doit être superbe et moderne. Combinez tout le code dans une seule page.",
+        "question": "Créez une landing page responsive pour la chaîne YouTube de Houssen Moshinaly avec : design accessible (WCAG 2.1), animations CSS performantes, et tests E2E avec Cypress. Le code doit valider le HTML5 validator.",
         "type": "web",
         "categorie": "code"
     },
     {
         "id": 2,
-        "question": "Créez un jeu graphique de Pierre-Papier-Ciseaux contre l'ordinateur en Python. L'utilisateur choisit entre Pierre, Papier et Ciseaux, et l'ordinateur choisit aléatoirement. Le programme détermine le gagnant selon les règles classiques et affiche le résultat.",
+        "question": "Développez un jeu Pierre-Papier-Ciseaux avec une IA utilisant des chaînes de Markov pour prédire les coups. Implémentez des graphiques SVG dynamiques et tests de non-biais avec pytest.",
         "type": "jeu",
         "categorie": "code"
     },
     {
         "id": 3,
-        "question": "Trouvez les racines de l'équation quadratique : x2 - 5x + 6 = 0",
+        "question": "Résolvez x² - 5x + 6 = 0 avec la méthode de Newton-Raphson. Analysez la stabilité numérique pour a=1e15, b=-5e15, c=6e15 et comparez avec numpy.",
         "type": "mathématiques",
         "categorie": "code"
     },
     {
         "id": 4,
-        "question": "Écrivez une fonction JavaScript qui implémente le tri fusion (merge sort) et expliquez sa complexité temporelle et spatiale.",
+        "question": "Implémentez un tri fusion itératif en JavaScript. Mesurez l'utilisation mémoire avec Chrome DevTools et comparez avec une version récursive.",
         "type": "algorithme",
         "categorie": "code"
     },
     {
         "id": 5,
-        "question": "Créez une API REST simple avec Express.js pour gérer une liste de tâches (TODO list) avec les opérations CRUD de base.",
+        "question": "Créez une API REST TODO list avec authentification JWT, rate limiting (100 req/min), et tests de charge Artillery.io. Évitez les injections SQL.",
         "type": "backend",
         "categorie": "code"
     },
     {
         "id": 6,
-        "question": "Optimisez la requête SQL suivante : SELECT * FROM users JOIN orders ON users.id = orders.user_id WHERE orders.status = 'completed' AND users.country = 'France';",
+        "question": "Optimisez cette requête SQL avec index composites et window functions. Utilisez EXPLAIN ANALYZE pour garantir un coût < 5000 sur 1M entrées.",
         "type": "sql",
         "categorie": "code"
     },
     {
         "id": 7,
-        "question": "Développez un composant React qui affiche un compteur avec des boutons pour incrémenter et décrémenter, en utilisant les hooks useState et useEffect.",
+        "question": "Créez un composant React avec persistance localStorage, gestion asynchrone (simulation API) et tests RTL vérifiant les fuites mémoire.",
         "type": "frontend",
+        "categorie": "code"
+    },
+    {
+        "id": 8,
+        "question": "Développez un custom element Web Component <json-viewer> affichant dynamiquement des données JSON avec coloration syntaxique. Implémentez des tests avec @web/test-runner.",
+        "type": "web",
+        "categorie": "code"
+    },
+    {
+        "id": 9,
+        "question": "Créez un script Python analysant un fichier JSON de 1Go (streaming) pour générer des mappings Elasticsearch optimisés. Gérez les erreurs de parsing avec des logs structurés.",
+        "type": "data",
+        "categorie": "code"
+    },
+    {
+        "id": 10,
+        "question": "Concevez un tableau de bord de management avec : métriques d'équipe en temps réel (WebSocket), RBAC, et export PDF. Utilisez les principes de l'amélioration continue.",
+        "type": "fullstack",
         "categorie": "code"
     }
 ]

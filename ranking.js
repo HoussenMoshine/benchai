@@ -43,15 +43,17 @@ class RankingManager {
             if (index === 0) badge = '<span class="badge gold">Or</span>';
             if (index === 1) badge = '<span class="badge silver">Argent</span>';
             if (index === 2) badge = '<span class="badge bronze">Bronze</span>';
-            if (result.score >= 90) {
+            const scorePercentage = (result.score / totalPossibleScore) * 100;
+            
+            if (scorePercentage >= 90) {
                 badge = '<span class="badge grand-maitre">Grand Maître</span>';
-            } else if (result.score >= 70) {
+            } else if (scorePercentage >= 70) {
                 badge = '<span class="badge challenger">Bon Challenger</span>';
-            } else if (result.score >= 50) {
+            } else if (scorePercentage >= 50) {
                 badge = '<span class="badge deception">Quelle déception !</span>';
-            } else if (result.score >= 30) {
+            } else if (scorePercentage >= 30) {
                 badge = '<span class="badge loin-compte">Loin du compte</span>';
-            } else if (result.score >= 10) {
+            } else if (scorePercentage >= 10) {
                 badge = '<span class="badge mediocre">Médiocre (et c\'est un compliment)</span>';
             } else {
                 badge = '<span class="badge a-chier">Vraiment à chier</span>';

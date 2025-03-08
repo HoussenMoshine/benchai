@@ -1,97 +1,75 @@
 # Projet BenchAI - Suivi et Documentation
 
-## 1. Fonctionnalités Principales
+## 1. Architecture et Conception
 
-### Classement des Benchmarks
-- Page dédiée avec les 100 meilleurs résultats
-- Filtrage par type (Code, Raisonnement ou Tous)
-- Tri par score décroissant
-- Graphique en barres des 10 premiers
-- Affichage des informations clés (nom, type, score, date)
-- Système complet de badges :
-  * Or, Argent, Bronze pour les 3 premiers
-  * Badges humoristiques pour les derniers classements
-  * Couleurs distinctives pour chaque tranche de score
-  * Animations et styles personnalisés
-- Statistiques globales :
-  * Nombre total de benchmarks
-  * Score moyen
-  * Meilleur score
+### Structure du Projet
+- Répertoire backend : logique serveur et base de données
+- Répertoire data : fichiers JSON des questions
+- Fichiers frontend : interface utilisateur et styles
 
-### Historique des Benchmarks
-- Affichage des résultats avec filtres et tri
-- Export des résultats en CSV et PDF
-- Suppression individuelle et multiple
-- Pagination des résultats
+### Flux de Données
+- Chargement des questions depuis fichiers JSON
+- Traitement des réponses via API REST
+- Stockage des résultats dans SQLite
+- Affichage des statistiques en temps réel
 
-### Gestion des Benchmarks
-- Enregistrement des nouveaux résultats
-- Filtrage avancé (par nom, type, date)
-- Vérification de disponibilité des noms
+## 2. Fonctionnalités Implémentées
 
-## 2. Améliorations Récentes
+### Gestion des Questions
+- Chargement dynamique depuis fichiers JSON
+- Validation de la structure des questions
+- Correction automatique des erreurs de formatage
+- Support de plusieurs catégories (code, raisonnement)
 
-### Frontend
-- Interface utilisateur modernisée :
-  * Design responsive
-  * Meilleure organisation des informations
-  * Feedback visuel enrichi
-- Notifications contextuelles améliorées
-- Styles spécifiques pour les champs invalides
+### Classement et Statistiques
+- Calcul des scores en temps réel
+- Génération de graphiques interactifs
+- Système de badges et récompenses
+- Export des résultats (CSV, PDF)
 
-### Backend
-- API /api/stats pour les statistiques globales
-- Optimisation des requêtes de classement
-- Gestion d'erreurs améliorée
-- Validation renforcée des types de benchmark
+## 3. Améliorations Récentes
 
-### UI/UX
-- Palettes de couleurs spécifiques pour chaque type de benchmark
-- Icônes différenciatrices (code, raisonnement, mixte)
-- Transitions fluides entre les filtres
-- Animations pour les éléments clés (fadeIn, slideIn)
+### Corrections Techniques
+- Normalisation des fichiers JSON
+- Suppression des balises HTML non échappées
+- Validation systématique des entrées
+- Documentation des modifications
 
-## 3. Prochaines Étapes Possibles
+### Optimisations
+- Réduction de la complexité algorithmique
+- Amélioration des temps de réponse
+- Gestion des erreurs renforcée
+- Tests automatisés ajoutés
 
-### Fonctionnalités Avancées
-- Classement par catégories (langage, framework)
-- Benchmarks spécialisés (IA générative, vision)
-- Intégration avec GitHub/GitLab
+## 4. Documentation Technique
+
+### Fichiers JSON
+- Structure normalisée
+- Validation automatique
+- Exemple de question valide :
+```json
+{
+  "id": 1,
+  "question": "Texte de la question",
+  "type": "code|raisonnement",
+  "categorie": "détail"
+}
+```
+
+### API Endpoints
+- GET /api/questions : Liste des questions
+- POST /api/answers : Soumission des réponses
+- GET /api/stats : Statistiques globales
+
+## 5. Prochaines Étapes
+
+### Évolutions Fonctionnelles
+- Ajout de nouvelles catégories
+- Intégration avec services externes
+- Personnalisation des profils utilisateurs
 
 ### Améliorations Techniques
-- Mise en cache des résultats
-- Tests automatisés
-- Surveillance des métriques
-
-### Expérience Utilisateur
-- Tableau de bord personnalisable
-- Système de réalisations
-- Comparaison en temps réel
-
-### Analyse de Données
-- Détection des tendances
-- Rapports de performance
-- Recommandations automatiques
-
-## 4. Détails Techniques
-
-### Filtrage des Benchmarks
-- Endpoint : GET /api/results/ranking
-- Paramètre : type (optionnel, valeurs : 'code', 'raisonnement')
-- Réponse : Array de résultats
-- Codes d'erreur :
-  * 400 - Type de benchmark invalide
-  * 500 - Erreur serveur
-
-### Frontend Implementation
-- Sélecteur de type avec options :
-  * Tous types
-  * Benchmark Code
-  * Benchmark Raisonnement
-- Mise à jour dynamique du tableau et du graphique
-- Gestion des erreurs réseau
-
-### Sécurité
-- Limite de 5 requêtes par minute
-- Validation des entrées
-- Protection contre les attaques par force brute
+- Migration vers base de données relationnelle
+- Mise en place de tests E2E
+- Monitoring des performances
+- Documentation technique étendue

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Définir les répertoires source et destination
-SOURCE_DIR="/home/houssen/serveur/BenchAI"
-SAUVEGARDE_DIR="/home/houssen/serveur/BenchAI-sauvegarde"
+SOURCE_DIR="/mnt/serveur/serveur/BenchAI"
+SAUVEGARDE_DIR="/mnt/serveur/serveur/BenchAI-sauvegarde"
 LOG_FILE="$HOME/benchai_backup.log"
 
 # Vérifier si les répertoires existent

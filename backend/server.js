@@ -62,7 +62,7 @@ app.get('/api/questions/:benchmarkType', async (req, res) => {
         const filePath = path.join(__dirname, 'data', `questions-ia-${benchmarkType}.json`);
         const questions = await fs.readFile(filePath, 'utf-8');
         
-        res.setHeader('Cache-Control', 'max-age=3600');
+        res.setHeader('Cache-Control', 'no-store, max-age=0');
         res.json(JSON.parse(questions));
     } catch (error) {
         console.error('Erreur lors de la lecture des questions:', error);
